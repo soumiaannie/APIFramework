@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="smokesuite" verbose="10" parallel="classes">
+    <parameter name="url" value="https://spree-vapasi.herokuapp.com;" ></parameter>
+
+    <test name="smoke">
+        <groups>
+        <run>
+        <include name="smoke"/>
+        </run>
+        </groups>
+
+        <classes>
+            <class name="getRequestTests.ValidateResponseCodeTest" />
+            <class name="postRequestTests.validateRegistrationTest" />
+
+        </classes>
+
+
+    </test>
+
+</suite>
+
